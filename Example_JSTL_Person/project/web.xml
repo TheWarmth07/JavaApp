@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	 version="3.0">
+    
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+    
+    <welcome-file-list>
+        <welcome-file>contact.jsp</welcome-file>
+    </welcome-file-list>
+    
+    <!-- SERVLET DEFINITIONS -->
+    <servlet>
+        <servlet-name>newPersonAction</servlet-name>
+        <servlet-class>controller.personController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>deleteEditPersonAction</servlet-name>
+        <servlet-class>controller.personController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>modifyPersonAction</servlet-name>
+        <servlet-class>controller.personController</servlet-class>
+    </servlet>
+
+    <!-- SERVLET MAPPING FOR SERVICES -->
+    <servlet-mapping>
+        <servlet-name>newPersonAction</servlet-name>
+        <url-pattern>/newPerson</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>deleteEditPersonAction</servlet-name>
+        <url-pattern>/personController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>modifyPersonAction</servlet-name>
+        <url-pattern>/modifyPerson</url-pattern>
+    </servlet-mapping>
+
+</web-app>
